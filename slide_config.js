@@ -2,7 +2,7 @@ var SLIDE_CONFIG = {
   // Slide settings
   settings: {
     title: 'Why Static Type Checking is Better',
-    eventTitle: 'EmpireJS 2015',
+    eventTitle: '<img src="images/empirejs.png" style=" height: 50px; top: 3px; position: relative; margin-top: -6px;">',
     useBuilds: false, // Default: true. False will turn off slide animation builds.
     usePrettify: true, // Default: true
     enableSlideAreas: true, // Default: true. False turns off the click areas on either slide of the slides.
@@ -11,14 +11,14 @@ var SLIDE_CONFIG = {
     fonts: [
       'Open Sans:regular,semibold,italic,italicsemibold',
       'Source Code Pro'
-    ],
+    ]
     //theme: ['mytheme'], // Add your own custom themes or styles in /theme/css. Leave off the .css extension.
   },
 
   // Author information
   presenters: [{
-    name: 'Andrew Rota',
-    company: 'JavaScript Engineer, Wayfair',
+    name: '@AndrewRota',
+    company: 'JavaScript Engineer, <img src="images/wflogo.png" style=" height: 26px; top: 3px; position: relative; margin-top: -6px;">',
     twitter: '@andrewrota',
     github: 'http://github.com/andrewrota'
   }]
