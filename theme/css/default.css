@@ -130,11 +130,11 @@ slides {
   -ms-transform-style: preserve-3d;
   -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  -webkit-transition: opacity 800ms ease-in;
+/*   -webkit-transition: opacity 800ms ease-in;
   -webkit-transition-delay: 100ms;
   -moz-transition: opacity 800ms ease-in 100ms;
   -o-transition: opacity 800ms ease-in 100ms;
-  transition: opacity 800ms ease-in 100ms;
+  transition: opacity 800ms ease-in 100ms; */
 }
 
 /* line 96, ../scss/_base.scss */
@@ -254,10 +254,10 @@ slides > slide {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
-  -webkit-transition: all 0.6s ease-in-out;
+/*   -webkit-transition: all 0.6s ease-in-out;
   -moz-transition: all 0.6s ease-in-out;
   -o-transition: all 0.6s ease-in-out;
-  transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out; */
 }
 /* line 119, ../scss/default.scss */
 slides > slide.far-past {
@@ -304,7 +304,7 @@ slides > slide:not(.nobackground):before {
   content: "@AndrewRota | #empirejs";
   position: absolute;
   bottom: 20px;
-  left: 60px;
+  left: 20px;
   /* background: url(../../images/google_developers_icon_128.png) no-repeat 0 50%; */
   -webkit-background-size: 30px 30px;
   -moz-background-size: 30px 30px;
