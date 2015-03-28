@@ -48,11 +48,16 @@ URL: https://code.google.com/p/io-2012-slides
     </hgroup>
     <article>
       <pre class="prettyprint" data-lang="javascript">
-function add(a, b) {
-    return a + b;
+function add(arr) {
+    var sum = 0;
+    for(var i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum;
 }
-add(1,2);
-add(1,[2,3]);
+add([2,3]);
+add(2);
+add(null);
 </pre>
     </article>
   </slide>
