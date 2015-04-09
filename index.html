@@ -21,6 +21,33 @@ URL: https://code.google.com/p/io-2012-slides
   <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
   <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
   <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+  <style>
+      blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #969;
+  margin: 1.5em 15px;
+  padding: 1em 15px;
+  margin-top: 100px;
+}
+blockquote:before {
+  color: #ccc;
+  content: '\201C';
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+  line-height: 1.25;
+}
+pre[data-lang]:after {
+     background-color: #969 !important;
+}
+.thank-you-slide {
+     background: #969 !important;
+}
+    </style>
 </head>
 <body style="opacity: 0">
 
@@ -107,6 +134,14 @@ add(null);
         <li>All <a href="http://google.com">links</a> open in new tabs.</li>
         <li>To change that this, add <code>target="_self"</code> to the link.</li>
       </ul>
+    </article>
+  </slide>
+ <slide>
+    <hgroup>
+      <h2>Slide with Quotation</h2>
+    </hgroup>
+    <article>
+      <blockquote>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.<p></p></blockquote>
     </article>
   </slide>
 
