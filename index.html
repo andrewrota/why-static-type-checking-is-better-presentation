@@ -47,17 +47,52 @@ pre[data-lang]:after {
 .thank-you-slide {
      background: #969 !important;
 }
+.source {
+  font-size: 10px;
+  font-style: italic;
+}
+
+.callout {
+  width: 100%;
+  padding: 60px;
+  margin-top: 20%;
+  margin-left: -60px;
+  background: rgba(255, 255, 255, 0.8);
+  color: black;
+}
+
+ul.block-list > li:before {
+  content: none !important;
+}
+ul.block-list {
+  width: 100%;
+  margin: 0 ;
+  display: block;
+  text-align: center;
+}
+.block-list > .block {
+  display: inline-block;
+  width: 18%;
+  height: 150px;
+  border: 1px solid black;
+  margin: 20px;
+  float: none;
+}
+.block-list > .block > div {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 150px;
+}
+.centeredImg {
+  width: 50%;
+  margin: 0 auto;
+  display: block;
+}
     </style>
 </head>
 <body style="opacity: 0">
 
 <slides class="layout-widescreen">
-
-<!--   <slide class="logoslide nobackground">
-    <article class="flexbox vcenter">
-        <h1>Why Static Type Checknig is Better</h1>
-    </article>
-  </slide> -->
 
   <slide class="title-slide segue nobackground">
     <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
@@ -67,24 +102,66 @@ pre[data-lang]:after {
       <p data-config-presenter><!-- populated from slide_config.json --></p>
     </hgroup>
   </slide>
-    
+  <slide class="fill nobackground" style="background-image: url(images/classification1.jpg)">
+    <hgroup>
+      <h2 class="callout">Types are value classifications.</h2>
+    </hgroup>
+    <footer class="source white">flickr.com/photos/glynlowe/8494249683</footer>
+  </slide>
     <slide>
         <aside class="note">
       <section>
         <ul>
-            <li>Type is a classification of a set of values</li>
+            <li>Type is a classification for a set of values</li>
         </ul>
-        <p><b>Remember to say this tag line!</b></p>
       </section>
     </aside>
     <hgroup>
-      <h2>Types</h2>
+      <h2>There are 7 Types in JavaScript</h2>
     </hgroup>
-    <article>
-      <p>A type is a classification of a set of values</p>
+      <article>
+      <ul class="block-list">
+        <li class="block"><div>Boolean</div></li>
+        <li class="block"><div>Number</div></li>
+        <li class="block"><div>String</div></li>
+        <li class="block"><div>Object</div></li>
+        <li class="block"><div>Symbol</div></li>
+        <li class="block"><div>Null</div></li>
+        <li class="block"><div>Undefined</div></li>
+      </ul>
+
+
     </article>
   </slide>
-    
+  <slide>
+    <hgroup>
+      <h2>But...JavaScript is Dynamically Typed</h2>
+    </hgroup>
+    <article>
+      <img class="centeredImg" src="images/changeAllTheTypes.jpg" alt="Dynamic types">
+    </article>
+  </slide>
+  <slide>
+    <hgroup>
+      <h2>Dynamic Typing</h2>
+      <h3>is cool...except when it's not.</h3>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="javascript">
+var x;
+typeof x === 'undefined'
+x = 5;
+typeof x === 'number'
+x = 'five';
+typeof x === 'string'
+x = true;
+typeof x === 'boolean'
+x = {value: 'five'};
+typeof x === 'object'
+</pre>
+    </article>
+  </slide>
+
     <slide>
     <hgroup>
       <h2>JavaScript!</h2>
