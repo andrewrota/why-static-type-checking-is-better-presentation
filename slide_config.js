@@ -18,7 +18,7 @@ var SLIDE_CONFIG = {
   // Author information
   presenters: [{
     name: '@AndrewRota',
-    company: 'JavaScript Engineer, <img src="images/wflogo.png" style=" height: 26px; top: 3px; position: relative; margin-top: -6px;">',
+    company: 'JavaScript Engineer, Wayfair.com',
     twitter: '@andrewrota',
     github: 'http://github.com/andrewrota'
   }]
