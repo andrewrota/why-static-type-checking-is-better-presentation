@@ -443,13 +443,12 @@ function add(arr<b>:Array&lt;number&gt;</b>)<b>:number</b>{
         </style>
         <article>
             <br>
-
             <div class="two-column">
                 <div class="column-1">
                     <h3>TypeScript</h3>
                     <ul>
-                        <li>Released 2012.</li>
-                        <li>Runs in JavaScript: any OS.</li>
+                        <li>Released 2012</li>
+                        <li>Written in JS: any OS</li>
                         <li>Community-provided declaration files</li>
                         <li>Addtional transpiled features (defaults, overloads)</li>
                     </ul>
@@ -457,15 +456,35 @@ function add(arr<b>:Array&lt;number&gt;</b>)<b>:number</b>{
                 <div class="column-2">
                     <h3>Flow</h3>
                     <ul>
-                        <li>Released 2014.</li>
-                        <li>Runs in OCaml: OSX, Linux.</li>
+                        <li>Released 2014</li>
+                        <li>Written in OCaml: OSX, Linux</li>
                         <li>Built-in <code>null</code> handling.</li>
+                        <li>Comment-only syntax available</li>
                     </ul>
                 </div>
             </div>
         </article>
     </slide>
-
+    <slide>
+        <aside class="note">
+            <section>2014</section>
+        </aside>
+        <hgroup>
+            <h2>Flow Comments</h2>
+            <h3>Alternative to a transpile step</h3>
+        </hgroup>
+        <article>
+            <pre class="prettyprint" data-lang="js">/* @flow */
+function add(arr<b>/*:Array&lt;number&gt;*/</b>)<b>/*:number*/</b>{
+    var sum<b>/*:number*/</b> = 0;
+    for (var i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum;
+}
+</pre>
+        </article>
+    </slide>
 
     <slide>
         <hgroup>
