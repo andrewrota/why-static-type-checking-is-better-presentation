@@ -98,6 +98,12 @@ URL: https://code.google.com/p/io-2012-slides
             margin: 0 auto;
             display: block;
         }
+        .centeredImgLarge {
+             min-height: 400px;
+             max-width: 80%;
+             margin: 0 auto;
+             display: block;
+         }
     </style>
 </head>
 <body style="opacity: 0">
@@ -116,18 +122,14 @@ URL: https://code.google.com/p/io-2012-slides
         </hgroup>
     </slide>
     <slide>
-        <h2 class="callout" style="text-align: center; padding: 0; margin: 0; margin-top: 27%;">With JavaScript...anything is possible</h2>
+        <h2 class="callout" style="text-align: center; padding: 0; margin: 0;">With JavaScript...anything is possible</h2><br><br>
+        <img  class="centeredImgLarge" src="images/overly-confident-8.gif" data-reset alt=""/>
     </slide>
-    <slide class="fill nobackground" style="background-image: url(images/classification1.jpg)">
-        <hgroup>
-            <h2 class="callout">Types are classifications of values.</h2>
-        </hgroup>
-        <footer class="source white">flickr.com/photos/glynlowe/8494249683</footer>
-    </slide>
+
     <slide>
 
         <hgroup>
-            <h2>There are 7 Types in JavaScript</h2>
+            <h2>7 Types in JavaScript</h2>
         </hgroup>
         <article>
             <ul class="block-list">
@@ -156,18 +158,18 @@ URL: https://code.google.com/p/io-2012-slides
         </article>
     </slide>
     <slide>
-        <hgroup>
-            <h2>JavaScript is Dynamically Typed</h2>
-        </hgroup>
+            <hgroup>
+                <h2 class="callout" style="text-align: center; padding: 0; margin: 0;">We have types, but they're not static.</h2>
+                <h3 style="text-align: center; padding: 0; margin: 0;">(No type is known or declared at compile time)</h3>
+            </hgroup>
         <article>
-            <img class="centeredImg" src="images/changeAllTheTypes.jpg" alt="Dynamic types">
+            <img class="centeredImgLarge" src="images/absurd.gif" data-reset alt="Dynamic types">
         </article>
     </slide>
     <slide>
         <hgroup>
             <h2>Dynamic Typing</h2>
 
-            <h3>Types aren't checked at compile time.</h3>
         </hgroup>
         <article>
       <pre class="prettyprint" data-lang="js">
@@ -207,7 +209,11 @@ add(null);  // Throws exception: cannot read prop 'length' of null
     </slide>
 
     <slide>
-        <h2 class="callout" style="text-align: center; padding: 0; margin: 0; margin-top: 27%;">What to do?</h2>
+        <hgroup>        <h2 class="callout" style="text-align: center; padding: 0; margin: 0;">What to do?</h2>
+        </hgroup>
+        <article>
+            <img class="centeredImgLarge" src="images/dnno.gif" data-reset alt="Dynamic types">
+        </article>
     </slide>
 
     <slide>
@@ -295,13 +301,20 @@ function add(arr) {
     </slide>
 
     <slide>
-        <h2 class="callout" style="text-align: center; padding: 0; margin: 0; margin-top: 27%;">Code Reviews !== Type
-            Checks</h2>
+        <hgroup><h2 class="callout" style="text-align: center; padding: 0; margin: 0;">Code Reviews !== Type
+            Checks</h2></hgroup>
+        <article>
+            <img class="centeredImgLarge" src="images/conan.gif" data-reset alt="Dynamic types">
+        </article>
     </slide>
 
 
     <slide>
-        <h2 class="callout" style="text-align: center; padding: 0; margin: 0; margin-top: 27%;">Type Checking in JavaScript</h2>
+        <hgroup>        <h2 class="callout" style="text-align: center; padding: 0; margin: 0;">Type Checking in JavaScript</h2>
+        </hgroup>
+        <article>
+            <img class="centeredImgLarge" src="images/yes.gif" data-reset alt="Dynamic types">
+        </article>
     </slide>
 
     <slide>
@@ -435,7 +448,7 @@ function someAnnotation(target:Function) { /* do something */ }
         </article>
     </slide>-->
 
-    <slide>
+    <!--<slide>
         <hgroup>
             <h2>SoundScript</h2>
             <h3>(coming soon?) | Runtime Type Checking</h3>
@@ -452,7 +465,7 @@ function add(arr)<b>:int</b>{
 </pre>
         </article>
     </slide>
-
+-->
 
 
 
@@ -530,7 +543,11 @@ function add(arr)<b>:int</b>{
 
 
     <slide>
-        <h2 class="callout" style="text-align: center; padding: 0; margin: 0; margin-top: 27%;">Adding Gradual Type Checks</h2>
+        <hgroup><h2 class="callout" style="text-align: center; padding: 0; margin: 0;">Adding Gradual Type Checks</h2></hgroup>
+        <article>
+            <img class="centeredImgLarge" src="images/EHoMNLZ.gif" data-reset alt="Dynamic types">
+        </article>
+
     </slide>
 
     <style>
@@ -631,15 +648,15 @@ function add(arr)<b>:int</b>{
         </hgroup>
         <article>
 
-            <h3 class="step">1. Run build with transformer.</h3>
-            <h3 class="step">2. Run <code>flow check</code></h3>
+            <h3 class="step">1. Run <code>flow check</code></h3>
+            <h3 class="step">2. Run build with transformer.</h3>
             <ul class="block-list">
                 <li class="block">
-                    <div>Transform</div>
+                    <div>Check</div>
                 </li>
                 <span style="font-size: 300%; font-weight: bold;">→</span>
                 <li class="block">
-                    <div>Check</div>
+                    <div>Transform</div>
                 </li>
             </ul>
         </article>
@@ -650,7 +667,7 @@ function add(arr)<b>:int</b>{
         </hgroup>
         <article>
 
-            <img src="images/flow1.gif" alt="Flow" style="height: 500px; margin: -30px auto 0 auto; display: block;"/>
+            <img src="images/flow1.gif" data-reset alt="Flow" style="height: 500px; margin: -30px auto 0 auto; display: block;"/>
 
         </article>
     </slide>
@@ -680,7 +697,7 @@ function add(arr)<b>:int</b>{
         </hgroup>
         <article>
 
-            <img src="images/typescript1.gif" alt="Typescript" style="height: 500px; margin: -30px auto 0 auto; display: block;"/>
+            <img src="images/typescript1.gif" data-reset alt="Typescript" style="height: 500px; margin: -30px auto 0 auto; display: block;"/>
 
         </article>
     </slide>
@@ -793,13 +810,6 @@ addExclamation(helloWorld('EmpireJS'));
             <h2>Object Literals</h2>
         </hgroup>
         <article>
-            <pre class="prettyprint" data-lang="JS">
-function doSomething(<b>modelObject</b>) {
-   return modelObject.title;
-}
-
-doSomething({title: 'My Object!', id: 2, flag: true});
-</pre>
             <pre class="prettyprint" data-lang="TS/Flow">
 function doSomething(<b>modelObject: {title: string}</b>) {
    return modelObject.title;
@@ -838,7 +848,7 @@ doSomething({title: 'My Object!', id: 2, flag: true});
             <ul>
                 <li>Classes</li>
                 <li>Modules</li>
-                <li>Maybe Types</li>
+                <li>Nullable Types</li>
                 <li>Generics</li>
                 <li>Polymorphism</li>
             </ul>
@@ -846,7 +856,10 @@ doSomething({title: 'My Object!', id: 2, flag: true});
     </slide>
 
     <slide>
-        <h2 class="callout" style="text-align: center; padding: 0; margin: 0; margin-top: 27%;">But is it worth it?</h2>
+        <hgroup><h2 class="callout" style="text-align: center; padding: 0; margin: 0;">But is it worth it?</h2></hgroup>
+        <article>
+            <img class="centeredImgLarge" src="images/believe.gif" data-reset alt="Dynamic types">
+        </article>
     </slide>
 
     <slide>
@@ -873,18 +886,57 @@ helloWorld(null);
         </hgroup>
         <article>
             <pre class="prettyprint" data-lang="JS">
-function flatten (input, shallow, strict, output) {}
+function flatten (input, shallow, strict) {}
         </pre>
             <pre class="prettyprint" data-lang="TS/Flow">
 function flatten (
     input: Array&lt;any&gt;,
     shallow: boolean,
-    strict: boolean,
-    output: Array&lt;any&gt;
+    strict: boolean
 ): Array&lt;any&gt; {}
         </pre><br>
 
             <footer class="source">source: http://flowtype.org/docs/underscore.html#_</footer>
+        </article>
+    </slide>
+
+    <slide>
+        <style>
+            .reason {
+                font-size: 75%;
+                font-weight: bold;
+                line-height: 1;
+            }
+            .reason-block {
+                margin-top: 50px !important;
+            }
+        </style>
+        <hgroup>
+            <h2>Easier to Reason About Code Flow</h2>
+        </hgroup>
+        <article>
+            <ul class="block-list">
+                <li class="block" style="width: 20%; top: 150px; position: relative;">
+                    <div class="reason-block">
+                        <p class="reason">In: <span style="color: orangered">Number</span></p>
+                        <p class="reason">Out: <span style="color: green">String</span></p>
+                    </div>
+                </li>
+                <span style="font-size: 300%; font-weight: bold; top: 120px; position: relative;">↗</span>
+                <li class="block" style="width: 20%; top: 100px; position: relative;">
+                    <div class="reason-block">
+                        <p class="reason">In: <span style="color: green">String</span></p>
+                        <p class="reason">Out: <span style="color: mediumblue ">Object</span></p>
+                    </div>
+                </li>
+                <span style="font-size: 300%; font-weight: bold; top: 80px; position: relative;">↗</span>
+                <li class="block" style="width: 20%; top: 50px; position: relative;">
+                    <div class="reason-block">
+                        <p class="reason">In: <span style="color: mediumblue ">Object</span></p>
+                        <p class="reason">Out: <span style="color: mediumvioletred">Boolean</span></p>
+                    </div>
+                </li>
+            </ul>
         </article>
     </slide>
 
@@ -947,9 +999,21 @@ function flatten (
 </slides>
 
 
-<!--[if IE]>
-<script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
-<script>CFInstall.check({mode: 'overlay'});</script>
-<![endif]-->
+<script>
+// Reset gifs in slide on slide enter
+document.addEventListener('slideenter', function(e) {
+    var slide = e.target;
+    var imagesToReset = slide.querySelectorAll('img[data-reset]');
+    if (imagesToReset[0]) {
+        Array.prototype.slice.call(imagesToReset).forEach(function(image) {
+            var source = image.src;
+            image.src = '';
+            window.setTimeout(function() {
+                image.src = source;
+            }, 0);
+        });
+    }
+}.bind(this), false);
+</script>
 </body>
 </html>
