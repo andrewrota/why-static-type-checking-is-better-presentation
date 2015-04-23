@@ -212,7 +212,7 @@ add(null);  // Throws exception: cannot read prop 'length' of null
 
     <slide>
         <hgroup>
-            <h2>Runtime Checks</h2>
+            <h2>Ad Hoc Runtime Checks</h2>
         </hgroup>
         <br>
             <pre class="prettyprint" data-lang="js">
@@ -231,7 +231,7 @@ function add(arr) {
     </slide>
     <slide>
         <hgroup>
-            <h2>Runtime Checks</h2>
+            <h2>Ad Hoc Runtime Checks</h2>
         </hgroup>
         <br>
             <pre class="prettyprint" data-lang="js">
@@ -399,6 +399,42 @@ function add(arr<b>/*:Array&lt;number&gt;*/</b>)<b>/*:number*/</b>{
         </article>
     </slide>
 
+    <!--<slide>
+        <hgroup>
+            <h2>AtScript</h2>
+            <h3>2014 | Metadata Annotations + Runtime Checks</h3>
+        </hgroup>
+        <article>
+            <pre class="prettyprint" data-lang="js">
+class Calculator {
+    <b>@someAnnotation</b>
+    add(arr:Array<number>){
+        // add numbers
+    }
+}
+function someAnnotation(target:Function) { /* do something */ }
+</pre>
+        </article>
+    </slide>
+
+    <slide>
+        <hgroup>
+            <h2><strike>AtScript</strike> → TypeScript</h2>
+            <h3>Decorators added to TypeScript</h3>
+        </hgroup>
+        <article>
+            <pre class="prettyprint" data-lang="js">
+class Calculator {
+    <b>@someAnnotation</b>
+    add(arr:Array<number>){
+        // add numbers
+    }
+}
+function someAnnotation(target:Function) { /* do something */ }
+</pre>
+        </article>
+    </slide>-->
+
     <slide>
         <hgroup>
             <h2>SoundScript</h2>
@@ -494,7 +530,7 @@ function add(arr)<b>:int</b>{
 
 
     <slide>
-        <h2 class="callout" style="text-align: center; padding: 0; margin: 0; margin-top: 27%;">Converting Legacy Codebases</h2>
+        <h2 class="callout" style="text-align: center; padding: 0; margin: 0; margin-top: 27%;">Adding Gradual Type Checks</h2>
     </slide>
 
     <style>
@@ -681,11 +717,24 @@ x.length;
         </hgroup>
         <article>
             <br>
-            <h5 style="font-size: 85%; font-weight: bold;">Flow:  <code>number</code>, <code>string</code>, <code>boolean</code>, <code>void</code>, <code>array</code>, <code>mixed</code>, <code>any</code></h5><br>
-            <h5 style="font-size: 85%; font-weight: bold;">TypeScript:  <code>number</code>, <code>string</code>, <code>boolean</code>, <code>void</code>, <code>array</code>, <code>any</code>, <code>enum</code></h5>
+            <h5 style="font-size: 85%; font-weight: bold;">Flow:  <code>number</code>, <code>string</code>, <code>boolean</code>, <code>void</code>, <code>Array</code>, <code>Function</code>, <code>Object</code>, <code>mixed</code>, <code>any</code></h5><br>
+            <h5 style="font-size: 85%; font-weight: bold;">TypeScript:  <code>number</code>, <code>string</code>, <code>boolean</code>, <code>void</code>, <code>Array</code>, <code>Function</code>, <code>Object</code>, <code>any</code>, <code>enum</code></h5>
             <br>
             <pre class="prettyprint" data-lang="TS/Flow">
 var x<b>:string</b> = 'test';
+</pre>
+        </article>
+    </slide>
+
+    <slide>
+        <hgroup>
+            <h2>Arrays</h2>
+        </hgroup>
+        <article>
+            <pre class="prettyprint" data-lang="TS/Flow">
+var list<b>:number[]</b> = [1,2,3];
+
+var anotherList<b>:Array&lt;number&gt;</b> = [1,2,3];
 </pre>
         </article>
     </slide>
@@ -776,6 +825,8 @@ function doSomething(<b>modelObject: Model</b>) {
 
 doSomething({title: 'My Object!', id: 2, flag: true});
 </pre>
+            <h3>External interfaces via declaration files</h3>
+            <h4>→ Find TypeScript declarations at <a href="http://definitelytyped.org/" target="_blank">definitelytyped.org</a></h4>
         </article>
     </slide>
 
@@ -819,7 +870,6 @@ helloWorld(null);
     <slide>
         <hgroup>
             <h2>Self-Document Code Behavior</h2>
-
         </hgroup>
         <article>
             <pre class="prettyprint" data-lang="JS">
