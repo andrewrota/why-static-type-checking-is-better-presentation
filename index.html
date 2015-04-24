@@ -127,6 +127,39 @@ URL: https://code.google.com/p/io-2012-slides
     </slide>
 
     <slide>
+        <hgroup>
+            <h2>Change all the types...</h2>
+
+        </hgroup>
+        <article>
+      <pre class="prettyprint" data-lang="js">
+var x; // x starts undefined
+typeof x === 'undefined'
+
+x = 5;  // now it's is a number
+typeof x === 'number'
+
+x = 'five'; // now it's a string
+typeof x === 'string'
+
+x = true;  // now it's a boolean
+typeof x === 'boolean'
+
+x = {value: 'five'}; // now it's an object
+typeof x === 'object'
+</pre>
+        </article>
+    </slide>
+    <slide>
+        <hgroup>
+            <h2 class="callout" style="text-align: center; padding: 0; margin: 0;">We have types, but they're not static.</h2>
+            <h3 style="text-align: center; padding: 0; margin: 0;">(No type is known or declared at compile time)</h3>
+        </hgroup>
+        <article>
+            <img class="centeredImgLarge" src="images/absurd.gif" data-reset alt="Dynamic types">
+        </article>
+    </slide>
+    <slide>
 
         <hgroup>
             <h2>7 Types in JavaScript</h2>
@@ -155,35 +188,6 @@ URL: https://code.google.com/p/io-2012-slides
                     <div>Undefined</div>
                 </li>
             </ul>
-        </article>
-    </slide>
-    <slide>
-            <hgroup>
-                <h2 class="callout" style="text-align: center; padding: 0; margin: 0;">We have types, but they're not static.</h2>
-                <h3 style="text-align: center; padding: 0; margin: 0;">(No type is known or declared at compile time)</h3>
-            </hgroup>
-        <article>
-            <img class="centeredImgLarge" src="images/absurd.gif" data-reset alt="Dynamic types">
-        </article>
-    </slide>
-    <slide>
-        <hgroup>
-            <h2>Dynamic Typing</h2>
-
-        </hgroup>
-        <article>
-      <pre class="prettyprint" data-lang="js">
-var x; // x starts undefined
-typeof x === 'undefined'
-x = 5;  // now it's is a number
-typeof x === 'number'
-x = 'five'; // now it's a string
-typeof x === 'string'
-x = true;  // now it's a boolean
-typeof x === 'boolean'
-x = {value: 'five'}; // now it's an object
-typeof x === 'object'
-</pre>
         </article>
     </slide>
     <slide>
